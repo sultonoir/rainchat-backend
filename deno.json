@@ -1,0 +1,17 @@
+{
+  "nodeModulesDir": "auto",
+  "imports": {
+    "@hono/zod-validator": "npm:@hono/zod-validator@^0.4.1",
+    "@prisma/client": "npm:@prisma/client@^6.0.1",
+    "hono": "jsr:@hono/hono@^4.6.12",
+    "zod": "npm:zod@^3.23.8"
+  },
+  "tasks": {
+    "start": "deno run --allow-net src/index.ts",
+    "dev": "deno run --allow-all --watch src/index.ts"
+  },
+  "compilerOptions": {
+    "jsx": "precompile",
+    "jsxImportSource": "hono/jsx"
+  }
+}
