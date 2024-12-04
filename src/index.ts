@@ -4,10 +4,11 @@ import { Hono } from "hono";
 import { logger } from "hono/logger";
 import { html } from "hono/html";
 import { dino } from "./routes/dino/dino.route.ts";
+import { cors } from "hono/cors";
 
 const app = new Hono();
 
-app.use("*", logger());
+app.use("*", logger()).use(cors());
 app.get("/", (c) => {
   return c.html(
     html`<html>
